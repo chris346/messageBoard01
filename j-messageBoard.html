@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+/*BODY*************************************************/
+		body{
+			font-family: helvetica ;
+		}
+		h1,h2,h3,h4,h5,h6{
+			margin: 0;
+			padding: 0;
+		}
+		a:-webkit-any-link {
+    		text-decoration: none;
+		}
+/**************************************************BODY/
+/*SampleHero*********************/
+		.hero{
+			background: navy;
+		}
+		.heroInner{
+			margin: 0 auto;
+			background: blue;
+			padding-bottom:0%;
+			position: relative;
+		}
+		@media screen and (min-width: 960px){
+			.heroInner{
+				width: 960px;
+				padding-bottom:0%;
+			}	
+		}
+		.heroInner img{
+			width: 100%;
+			height: auto;
+		}
+/*SampleHero*********************/
+/*messageBoard*********************/
+	.menu-on{
+		background-color: #000;
+		color: #fff;
+		position: fixed;
+		right: 0; /*to adjust position of button*/
+		top: 0; /*to adjust position of button*/
+		z-index: 1000; /*might need to adjust when using other buttons*/
+		padding: 10px;
+	}
+	.menu-off{
+		position: fixed;
+		width: 50px;
+		top: 0;
+		right: 0;
+		z-index: 1003;
+		display: none;
+	}
+	.messageBoard {
+		background-color: #000;
+		position: fixed;
+		right: 0;
+		top: 0; 
+		min-width: 200px;
+		z-index: 1002;
+		display: none;
+		width: 50%;
+		height: 100%;
+		position: absolute;
+		background-color: rgba(0,0,0, .6);
+	}	
+	.messageBoard a{
+		color: #fff;
+		display: block;
+		padding: 5px 10px;
+	}
+	.x{
+		width: 30px;
+	}
+	#toggle-menu {
+		display: none;
+	}
+	#toggle-menu:checked ~ .messageBoard {
+		display: block;
+	}
+	#toggle-menu:checked ~ .menu-off{
+		display: block;
+	}
+	@media screen and (min-width: 600px){
+		.menu-on, .menu-off {
+			display: none;
+		}
+		.messageBoard{
+			display: block;
+		}
+	}
+/*messageBoard*********************/
+</style>
+</head>
+<body>
+	<div class="hero">
+		<div class="linearGradientTop">
+			<div class="heroInner">
+				
+				<input id="toggle-menu" type="checkbox" />
+				<label for="toggle-menu" class="menu-on">Menu On</label>
+				<label for="toggle-menu" class="menu-off"><img class="x" src="x.png" alt=""></label>
+				
+				<div class="messageBoard">				
+					<a href="">message1</a>
+					<a href="">message2</a>
+					<a href="">message3</a>
+					<a href="">message4</a>
+				</div>
+				
+				<img src="d.va.jpg" alt="">
+		</div>
+		</div>
+
+	</div>
+</body>
+</html>
