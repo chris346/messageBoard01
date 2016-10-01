@@ -48,12 +48,17 @@
 		z-index: 1000; /*might need to adjust when using other buttons*/
 		padding: 10px;
 	}
+	@media screen and (min-width: 600px){
+		.menu-on{
+			width: 50px; /*may need to adjust as more buttons are added*/
+		}	
+	}
 	.menu-off{
-		position: fixed;
+		position: absolute;
 		width: 50px; /*also used to adjust icon size*/
 		top: 0;
 		right: 0;
-		z-index: 1003;
+		z-index: 1004;
 		display: none;
 	}
 	.messageBoard {
@@ -64,20 +69,21 @@
 		z-index: 1002;
 		display: none;
 		width: 100%;
-		height: 100%;
+		height: 65%;
 		position: absolute;
 		max-height: 100%;
 	}	
 	@media screen and (min-width: 600px){
 		.messageBoard{
-			width: 50%;
+			width: 45%;
 		}	
 	}
 	.message-icon{
 		width: 30px;
 	}
 	.x-icon{
-		width: 300px;
+		width: 30px;
+		margin-right: 17%;
 	}
 	#toggle-menu {
 		display: none;
@@ -88,7 +94,7 @@
 	#toggle-menu:checked ~ .menu-off{
 		display: block;
 	}
-	@media screen and (min-width: 600px){
+/*	@media screen and (min-width: 600px){
 		.menu-on, .menu-off {
 			display: none;
 		}
@@ -96,7 +102,7 @@
 			display: block;
 			overflow: scroll;
 		}
-	}
+	}*/
 /*messageBoard*********************/
 	.timeline-Body{
 		background-color: rgba(0,0,0,0);
@@ -108,14 +114,14 @@
 	<div class="hero">
 		<div class="linearGradientTop">
 			<div class="heroInner">
-<!-- Message Board	-->
+			<!-- Message Board	-->
 				<input id="toggle-menu" type="checkbox" />
 				<label for="toggle-menu" class="menu-on"><img class="message-icon" src="message.png" alt=""></label>
 				<label for="toggle-menu" class="menu-off"><img class="x-icon" src="x.png" alt=""></label>
 				
 				<div class="messageBoard">				
 				<a class="twitter-timeline" data-theme="dark" data-link-color="#E81C4F" href="https://twitter.com/cigaya1">Message Board by cigaya1</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>				</div>
-<!-- Message Board	-->				
+			<!-- Message Board	-->				
 				<img src="risingSunLogoHD.jpg" alt="">
 			</div>
 
